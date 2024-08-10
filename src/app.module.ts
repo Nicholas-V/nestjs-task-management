@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
-import { TasksStatusEnum } from './tasks/tasks-status.enum';
+import { TaskModule } from './tasks/task.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
-    TasksStatusEnum,
+    TaskModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: 'localhost',
