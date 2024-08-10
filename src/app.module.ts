@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
-import { TasksModule } from './tasks/tasks.module';
+import { TasksStatusEnum } from './tasks/tasks-status.enum';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
   imports: [
-    TasksModule,
+    TasksStatusEnum,
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: 'localhost',
